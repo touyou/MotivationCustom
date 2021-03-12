@@ -63,6 +63,10 @@
         year: majorMinor[0],
         milliseconds: majorMinor[1]
       }));
+
+      var logo = this.$$('img')[0];
+      if (!logo) return;
+      logo.style.transform = "rotateZ(" + Math.floor((duration / 1000) % 360) + "deg)";
     }.bind(this));
   };
 
